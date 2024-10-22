@@ -1,6 +1,6 @@
 {
   "name": "react-mower",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Protect your React application from DevTools and unwanted cursor actions",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -25,7 +25,7 @@
   },
   "author": "Jasur Haydarov",
   "license": "MIT",
-  "peerDependencies": {
+  "dependencies": {
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0",
     "react-toastify": "^9.0.0"
