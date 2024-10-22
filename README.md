@@ -1,3 +1,6 @@
+<img src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png" width="70">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png" width="70" align=right>
+
 ## React Mower
 A powerful React package for protecting your web applications from unwanted developer tools access and cursor-based interactions.
 
@@ -14,60 +17,41 @@ A powerful React package for protecting your web applications from unwanted deve
 
 ### Installation
 ```
-npm install react-mower react-toastify
+npm install react-mower
 ```
 
-##### This package requires react-toastify as a peer dependency.
+##### This package requires react-toastify as a peer dependency, and you only need to install react-mower
 
 ---
 
 ## Usage
 #### Basic Setup
 
-```tsx
-import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
-import { CursorProtect, DevToolsBlocker } from 'react-mower';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
-const root = createRoot(document.getElementById('root'));
-
-root.render(
-  <StrictMode>
-    <CursorProtect>
-      <DevToolsBlocker>
-        <App />
-      </DevToolsBlocker>
-    </CursorProtect>
-    <ToastContainer
-      position="top-center"
-      autoClose={2000}
-      hideProgressBar={false}
-      newestOnTop={true}
-      closeOnClick
-      pauseOnHover
-      draggable
-      limit={1}
-    />
-  </StrictMode>
-);
-```
-
-Using Individual Components
-DevTools Blocker Only
+#### Loading in the `main.tsx` component
+##### `DevTools Blocker Only` using `main.tsx`
 ```tsx
 import { DevToolsBlocker } from 'react-mower';
 
-function App() {
-  return (
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+
+import App from "./App";
+
+const container = document.getElementById("root");
+const root = createRoot(container as HTMLDivElement);
+
+root.render(
+  <StrictMode>
     <DevToolsBlocker>
-      <YourApp />
+      <App />
     </DevToolsBlocker>
-  );
-}
-Cursor Protection Only
-jsxCopyimport { CursorProtect } from 'react-mower';
+  </StrictMode>
+);
+```
+#### Using Individual Components
+`Cursor Protection Only`
+```tsx
+import { CursorProtect } from 'react-mower';
 
 function App() {
   return (
