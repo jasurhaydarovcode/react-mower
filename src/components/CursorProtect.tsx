@@ -1,19 +1,19 @@
-import React from 'react';
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-const CursorProtect: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const CursorProtect = ({ children, message = "❌ Website Protected" }) => {
     const [isProtected, setIsProtected] = useState(false);
 
     useEffect(() => {
         const handleMouseLeave = () => setIsProtected(true);
         const handleMouseEnter = () => setIsProtected(false);
-        const handleKeyDown = (e: KeyboardEvent) => {
+        const handleKeyDown = (e) => {
             if (e.key === 'Window' + 'g') {
                 e.preventDefault();
                 setIsProtected(true);
             }
         };
+
         document.addEventListener('keydown', handleKeyDown);
         document.addEventListener('mouseleave', handleMouseLeave);
         document.addEventListener('mouseenter', handleMouseEnter);
@@ -45,7 +45,7 @@ const CursorProtect: React.FC<{ children: React.ReactNode }> = ({ children }) =>
                         fontSize: '24px',
                     }}
                 >
-                    ❌ Websayt Himoyalangan
+                    {message}
                 </div>
             )}
         </>
@@ -54,6 +54,7 @@ const CursorProtect: React.FC<{ children: React.ReactNode }> = ({ children }) =>
 
 CursorProtect.propTypes = {
     children: PropTypes.node.isRequired,
+    protectionMessage: PropTypes.string
 };
 
 export default CursorProtect;
