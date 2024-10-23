@@ -55,12 +55,16 @@ import { CursorProtect } from 'react-mower';
 
 function App() {
   return (
-    <CursorProtect>
+    <CursorProtect message='❌ Screen Blocked'>
       <YourApp />
     </CursorProtect>
   );
 }
 ```
+#### `message` With the message attribute, you can give your own arbitrary name when the screen block is on
+
+---
+
 ### Components
 ### DevToolsBlocker
 Prevents access to browser developer tools through:

@@ -1,13 +1,13 @@
+import React from 'react';
 import { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
 
-const CursorProtect = ({ children, message = "❌ Website Protected" }) => {
+const CursorProtect: React.FC<{ children: React.ReactNode; message?: string }> = ({ children, message = "❌ Website Protected" }) => {
     const [isProtected, setIsProtected] = useState(false);
 
     useEffect(() => {
         const handleMouseLeave = () => setIsProtected(true);
         const handleMouseEnter = () => setIsProtected(false);
-        const handleKeyDown = (e) => {
+        const handleKeyDown = (e: KeyboardEvent) => {
             if (e.key === 'Window' + 'g') {
                 e.preventDefault();
                 setIsProtected(true);
@@ -50,11 +50,6 @@ const CursorProtect = ({ children, message = "❌ Website Protected" }) => {
             )}
         </>
     );
-};
-
-CursorProtect.propTypes = {
-    children: PropTypes.node.isRequired,
-    protectionMessage: PropTypes.string
 };
 
 export default CursorProtect;
