@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { DisableScreenshotProps } from '../types/DisableScreenshotProps';
 
-interface DisableScreenshotProps {
-    screenMessage?: string;
-}
-
-const DisableScreenshot: React.FC<DisableScreenshotProps> = ({ screenMessage = "Screenshots are prohibited!" }) => {
+const DisableScreenshot: React.FC<DisableScreenshotProps> = ({ screenMessage = "Screenshots are prohibited!", children }) => {
     const [isBlackout, setIsBlackout] = useState(false);
 
     useEffect(() => {
         const preventScreenshot = (e: KeyboardEvent) => {
-            if (e.keyCode === 44) {  // keyCode 44 corresponds to the PrintScreen key
+            if (e.keyCode === 44) {  // PrintScreen key == 44
                 e.preventDefault();
                 setIsBlackout(true);
                 setTimeout(() => setIsBlackout(false), 1000);
@@ -52,7 +49,7 @@ const DisableScreenshot: React.FC<DisableScreenshotProps> = ({ screenMessage = "
         );
     }
 
-    return null;
+    return <>{children}</>;
 };
 
 export default DisableScreenshot;

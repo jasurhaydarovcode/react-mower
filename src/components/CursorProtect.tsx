@@ -1,7 +1,8 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import { CursorProtectProps } from '../types/CursorProtectProps';
 
-const CursorProtect: React.FC<{ children: React.ReactNode; message?: string }> = ({ children, message = "❌ Website Protected" }) => {
+const CursorProtect: React.FC<CursorProtectProps> = ({ children, message = "❌ Website Protected" }) => {
     const [isProtected, setIsProtected] = useState(false);
 
     useEffect(() => {

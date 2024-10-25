@@ -2,8 +2,9 @@ import { useEffect } from 'react';
 import { toast, ToastContainer } from 'react-toastify';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { childrenType } from '../types/Spec/children';
 
-const DevToolsBlocker: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const DevToolsBlocker: React.FC<childrenType> = ({ children }) => {
     useEffect(() => {
         const showWarning = () => {
             toast.error("Dev Tools are not allowed to open!", {
