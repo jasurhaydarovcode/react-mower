@@ -1,5 +1,5 @@
-<img src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png" width="70">
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png" width="70" align=right>
+<img src=".github/icons/React.png" width="70">
+<img src=".github/icons/Typescript.png" width="70" align=right>
 
 ## React Mower
 A powerful React package for protecting your web applications from unwanted developer tools access and cursor-based interactions.
@@ -10,6 +10,7 @@ A powerful React package for protecting your web applications from unwanted deve
 
 1. 🛡️ Block Developer Tools access
 2. 🖱️ Cursor protection
+3. 📸 Block screenshot
 3. ⚡ Lightweight and easy to use
 4. 🔒 Multiple protection layers
 
@@ -30,22 +31,12 @@ npm install react-mower
 #### Loading in the `main.tsx` component
 ##### `DevTools Blocker Only` using `main.tsx`
 ```tsx
+import 'react-toastify/dist/ReactToastify.css';
 import { DevToolsBlocker } from 'react-mower';
 
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-
-import App from "./App";
-
-const container = document.getElementById("root");
-const root = createRoot(container as HTMLDivElement);
-
-root.render(
-  <StrictMode>
     <DevToolsBlocker>
       <App />
     </DevToolsBlocker>
-  </StrictMode>
 );
 ```
 #### Using Individual Components
@@ -62,6 +53,15 @@ function App() {
 }
 ```
 #### `message` With the message attribute, you can give your own arbitrary name when the screen block is on
+
+---
+
+### Using for Code Example
+
+| Tablets             | Import             | Props       |
+|---------------------|--------------------|-------------|
+| Cursor Protect      | `<CursorProtect>`  |  {message}  | 
+
 
 ---
 
