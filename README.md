@@ -1,5 +1,5 @@
-<img src=".github/icons/React.png" width="70">
-<img src=".github/icons/Typescript.png" width="70" align=right>
+<img src="https://github.com/jasurhaydarovcode/react-mower/blob/main/.github/icons/React.png?raw=true" width="70">
+<img src="https://github.com/jasurhaydarovcode/react-mower/raw/main/.github/icons/Typescript.png" width="70" align=right>
 
 ## React Mower
 A powerful React package for protecting your web applications from unwanted developer tools access and cursor-based interactions.
