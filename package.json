@@ -1,6 +1,6 @@
 {
   "name": "react-mower",
-  "version": "1.2.19",
+  "version": "1.2.20",
   "description": "Protect your React application from DevTools and unwanted cursor actions",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
