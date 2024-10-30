@@ -1,0 +1,7 @@
+{
+    "extends": ["config:base"],
+    "schedule": ["every 2 months"],
+    "automerge": false,
+    "labels": ["renovate"]
+  }
+  

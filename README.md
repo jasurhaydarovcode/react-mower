@@ -1,5 +1,5 @@
-<img src="https://github.com/jasurhaydarovcode/react-mower/blob/main/.github/icons/React.png?raw=true" width="70">
-<img src="https://github.com/jasurhaydarovcode/react-mower/raw/main/.github/icons/Typescript.png" width="70" align=right>
+<img src="https://cdn3d.iconscout.com/3d/free/thumb/free-react-3d-icon-download-in-png-blend-fbx-gltf-file-formats--facebook-logo-native-javascript-library-user-interfaces-coding-lang-pack-logos-icons-7578010.png?f=webp" width="70">
+<img src="https://cdn3d.iconscout.com/3d/free/thumb/free-typescript-3d-icon-download-in-png-blend-fbx-gltf-file-formats--microsoft-logo-angular-language-javascript-static-type-coding-lang-pack-logos-icons-7577992.png" width="70" align=right>
 
 ## React Mower
 A powerful React package for protecting your web applications from unwanted developer tools access and cursor-based interactions.
