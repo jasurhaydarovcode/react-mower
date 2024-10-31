@@ -11,7 +11,7 @@ const GitHubStarCount: React.FC<GitHubStarCountProps> = ({ githubStar }) => {
                 const data = await response.json();
                 setStars(data.stargazers_count);
             } catch (error) {
-                console.error("Yulduzlar sonini olishda xatolik:", error);
+                console.error("Error getting number of stars:", error);
             }
         };
 

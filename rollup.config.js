@@ -24,7 +24,7 @@ export default [
         ],
     },
     {
-        input: 'src/index.tsx',  // Deklaratsiya uchun asosiy fayl
+        input: 'src/index.tsx',  // Declaration for root file
         output: [{ file: 'dist/index.d.ts', format: 'es' }],
         plugins: [dts()],
     },
