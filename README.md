@@ -12,7 +12,8 @@ A powerful React package for protecting your web applications from unwanted deve
 2. 🖱️ Cursor protection
 3. 📸 Block screenshot
 3. ⚡ Lightweight and easy to use
-4. 🔒 Multiple protection layers
+4. 🔳 Github Star Button Count
+5. 🔒 Multiple protection layers
 
 ---
 
@@ -61,6 +62,7 @@ function App() {
 | Tablets             | Import             | Props       |
 |---------------------|--------------------|-------------|
 | Cursor Protect      | `<CursorProtect>`  |  {message}  | 
+| Github Star Button Count | `<GitHubStarCount />` | {githubStar}, username/repo |
 
 
 ---
