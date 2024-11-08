@@ -16,7 +16,7 @@ export default [
                 format: 'esm',
             },
         ],
-        external: ['react', 'react-dom', 'react-toastify'],
+        external: [ 'react', 'react-dom', 'react-toastify' ],
         plugins: [
             resolve(),
             commonjs(),
@@ -25,7 +25,7 @@ export default [
     },
     {
         input: 'src/index.tsx',  // Declaration for root file
-        output: [{ file: 'dist/index.d.ts', format: 'es' }],
-        plugins: [dts()],
+        output: [ { file: 'dist/index.d.ts', format: 'es' } ],
+        plugins: [ dts() ],
     },
 ];
