@@ -59,10 +59,11 @@ function App() {
 
 ### Using for Code Example
 
-| Tablets             | Import             | Props       |
-|---------------------|--------------------|-------------|
-| Cursor Protect      | `<CursorProtect>`  |  {message}  | 
+| Tablets                  | Import                | Props                      |
+|--------------------------|-----------------------|----------------------------|
+| Cursor Protect           | `<CursorProtect />`   | {message}                  | 
 | Github Star Button Count | `<GitHubStarCount />` | {githubStar}, username/repo |
+| Dev Tools Blocker        | `<DevToolsBlocker  />`| soon                       |
 
 
 ---
