@@ -1,7 +1,5 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { toast, ToastContainer } from 'react-toastify';
-import PropTypes from 'prop-types';
-import React from 'react';
 import { childrenType } from '../types/Spec/children';
 
 const DevToolsBlocker: React.FC<childrenType> = ({ children }) => {
@@ -59,10 +57,6 @@ const DevToolsBlocker: React.FC<childrenType> = ({ children }) => {
             <ToastContainer limit={1} />
         </>
     );
-};
-
-DevToolsBlocker.propTypes = {
-    children: PropTypes.node.isRequired,
 };
 
 export default DevToolsBlocker;
