@@ -42,6 +42,24 @@ import { DevToolsBlocker } from 'react-mower';
     </DevToolsBlocker>
 );
 ```
+`Custom Style Toast`
+```tsx
+import { DevToolsBlocker } from 'react-mower';
+
+...
+
+<DevToolsBlocker
+  toastOptions={{
+    position: "bottom-right",
+    autoClose: 3000,
+    closeOnClick: false,
+    pauseOnHover: true,
+    color: "#ff9800"
+  }}
+  >
+  <App />
+</DevToolsBlocker>
+```
 #### Using Individual Components
 `Cursor Protection Only`
 ```tsx
