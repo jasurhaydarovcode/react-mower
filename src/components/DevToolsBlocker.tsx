@@ -1,18 +1,19 @@
 import React, { useEffect } from 'react';
-import { toast, ToastContainer } from 'react-toastify';
-import { childrenType } from '../types/Spec/children';
+import { toast, ToastContainer, ToastPosition } from 'react-toastify';
+import { DevToolsBlockerProps } from '../types/DevToolsBlockerProps';
 
-const DevToolsBlocker: React.FC<childrenType> = ({ children }) => {
+const DevToolsBlocker: React.FC<DevToolsBlockerProps> = ({ children, toastOptions }) => {
     useEffect(() => {
         const showWarning = () => {
             toast.error("Dev Tools are not allowed to open!", {
-                position: "top-center",
-                autoClose: 2000,
+                position: toastOptions?.position || "top-right",
+                autoClose: toastOptions?.autoClose || 2000,
                 hideProgressBar: true,
-                closeOnClick: true,
-                pauseOnHover: false,
+                closeOnClick: toastOptions?.closeOnClick ?? true,
+                pauseOnHover: toastOptions?.pauseOnHover ?? false,
                 draggable: false,
                 toastId: 'uniqueToastId',
+                style: { backgroundColor: toastOptions?.color || '#fff' }
             });
         };
 
@@ -49,7 +50,7 @@ const DevToolsBlocker: React.FC<childrenType> = ({ children }) => {
             window.removeEventListener('keydown', handleKeyDown);
             window.removeEventListener('contextmenu', handleContextMenu);
         };
-    }, []);
+    }, [toastOptions]);
 
     return (
         <>

@@ -39,5 +39,5 @@ const figlet = require( 'figlet' );
     }
 
     console.log( chalk.cyan( 'Thank you for installing React Mower! ' +
-        '\nhttps://github.com/jasurhaydarovcode/react-mower' ) );
+        '\nhttps://github.com/jasurhaydarovcode/react-mower-docs' ) );
 })();

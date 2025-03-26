@@ -35,7 +35,6 @@ npm install react-mower
 #### Loading in the `main.tsx` component
 ##### `DevTools Blocker Only` using `main.tsx`
 ```tsx
-import 'react-toastify/dist/ReactToastify.css';
 import { DevToolsBlocker } from 'react-mower';
 
     <DevToolsBlocker>
